@@ -14,4 +14,16 @@ Movie movie = new Movie
   genres = new List<string> { "Action", "Romance", "Comedy" }
 };
 
+string choice = "";
+do
+{
+  // display choices to user
+  Console.WriteLine("1) Add Movie");
+  Console.WriteLine("2) Display All Movies");
+  Console.WriteLine("Enter to quit");
+  // input selection
+  choice = Console.ReadLine();
+  logger.Info("User choice: {Choice}", choice);
+} while (choice == "1" || choice == "2");
+
 logger.Info("Program ended");
